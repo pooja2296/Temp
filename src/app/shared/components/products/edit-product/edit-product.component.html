@@ -1,0 +1,21 @@
+<div>
+    <p class="alert alert-danger" *ngIf="!canEdit">
+        You cannot Edit this product
+    </p>
+    <div class="form-group">
+        <label for="pname">Product Name</label>
+        <input type="text" [disabled]="!canEdit"
+        class="form-control" [value]="productDetails.pName">
+    </div>
+    <div class="form-group">
+        <label for="pStatus">Product Status</label>
+        <select id="pStatus" [disabled]="!canEdit" class="form-control" [value]="productDetails.pStatus" >
+            <option value="In progress">In progress</option>
+            <option value="Delivered">Delivered</option>
+            <option value="Dispatched">Dispatched</option>
+        </select>
+    </div>
+    <button [disabled]="!canEdit" class="btn btn-primary">
+        Update Product
+    </button>
+</div>

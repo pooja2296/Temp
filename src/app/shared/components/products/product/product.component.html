@@ -1,0 +1,15 @@
+<p>product Name is <strong>{{productDetails.pName}}</strong></p>
+<p>product Status is <strong>{{productDetails.pStatus}}</strong></p>
+
+
+
+<!-- <button class="btn btn-primary" 
+[routerLink]="['/products', productDetails.pId, 'edit']"
+[queryParamsHandling]="'preserve'">
+    Edit Product
+</button> -->
+
+<button class="btn btn-primary" (click)="gotoEditproducts()">
+    Edit Product
+</button>
+<hr>
